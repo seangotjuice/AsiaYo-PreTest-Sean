@@ -14,8 +14,8 @@ This is a Node.js/Express application that provides an API to validate and trans
 1. Clone the repository:
 
    ```sh
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone git@github.com:seangotjuice/AsiaYo-PreTest-Sean.git
+   cd AsiaYo-PreTest-Sean
    ```
 
 2. Build and start the Docker containers:
@@ -44,6 +44,26 @@ This command will build the Docker image, install all dependencies, and start th
   "price": "2050",
   "currency": "TWD"
 }
+```
+
+### Send Request
+
+You can send a POST request to http://localhost:3000/api/orders with a JSON body using tools like curl or Postman.
+
+```sh
+curl -X POST http://localhost:3000/api/orders \
+-H "Content-Type: application/json" \
+-d '{
+  "id": "A0000001",
+  "name": "Melody Holiday Inn",
+  "address": {
+    "city": "taipei-city",
+    "district": "da-an-district",
+    "street": "fuxing-south-road"
+  },
+  "price": "2050",
+  "currency": "TWD"
+}'
 ```
 
 ## Run Tests
